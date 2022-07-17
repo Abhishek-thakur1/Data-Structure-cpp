@@ -8,7 +8,11 @@ using namespace std;
 #define HASH_H
 
 class hashMain{
+    private:
+        int tableSize;
+
     public:
+        hashMain();
         int Hash(string key);
 };
 

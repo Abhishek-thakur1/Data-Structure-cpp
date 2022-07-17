@@ -9,7 +9,7 @@ int main(){
 
     int index;
     hashMain hashObj;
-    index = hashObj.Hash("cat");
+    index = hashObj.Hash("Cat");
 
     cout << "index- " << index << "\n";
 }
