@@ -5,10 +5,6 @@
 
 using namespace std;
 
-hashMain::hashMain(){
-    tableSize = 100;
-}
-
 int hashMain::Hash(string key){
     int hash = 0;
     int index;

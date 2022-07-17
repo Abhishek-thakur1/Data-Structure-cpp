@@ -9,10 +9,18 @@ using namespace std;
 
 class hashMain{
     private:
-        int tableSize;
+        static const int tableSize = 20;
+        
+        struct Item {
+            string name;
+            string food;
+            Item* next;
+        };
+
+        Item* Hashtable[tableSize];
 
     public:
-        hashMain();
+        
         int Hash(string key);
 };
 
