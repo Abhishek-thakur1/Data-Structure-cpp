@@ -25,6 +25,8 @@ int main(){
 
     bst->printSize();
 
+    bst->printMIN();
+
     getchar();
 
     delete bst;

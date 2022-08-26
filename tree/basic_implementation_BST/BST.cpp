@@ -1,4 +1,5 @@
 #include <iostream>
+#include<stdexcept>
 #include "BST.h"
 
 using namespace std;
@@ -84,7 +85,22 @@ void BST::searchNode(Node* temp, int data) {
 	}
 }
 
-void BST::printSize()
-{
+void BST::printSize(){
 	cout << endl << "Size of BST is " << size << " nodes." << endl;
+}
+
+void BST::printMIN(){
+	Node *tmp = root;
+	cout<< "Minimum Element in the TREE: " << findMin(tmp) << endl;
+}
+
+int BST::findMin(Node *tmp){
+	if(tmp == NULL){
+		throw invalid_argument("Tree is Empty");
+	}
+
+	while(tmp->left != NULL){
+		tmp = tmp->left;
+	}
+	return tmp->data;
 }

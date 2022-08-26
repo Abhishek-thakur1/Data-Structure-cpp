@@ -22,4 +22,7 @@ class BST{
 
     void search(int data);
     void searchNode(Node *temp, int data);
+
+    void printMIN();
+    int findMin(Node *root);
 };
