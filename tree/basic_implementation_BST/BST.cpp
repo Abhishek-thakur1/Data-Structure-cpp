@@ -83,3 +83,8 @@ void BST::searchNode(Node* temp, int data) {
 		searchNode(temp->right, data);
 	}
 }
+
+void BST::printSize()
+{
+	cout << endl << "Size of BST is " << size << " nodes." << endl;
+}

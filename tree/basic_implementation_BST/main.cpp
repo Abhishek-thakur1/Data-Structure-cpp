@@ -9,23 +9,24 @@ int main(){
 
     bst->print();
 
-    bst->insertNode(10);
     bst->insertNode(15);
-    bst->insertNode(12);
+    bst->insertNode(10);
+    bst->insertNode(20);
     
+    bst->insertNode(17);
+    bst->insertNode(12);
+    bst->insertNode(25);
     bst->insertNode(8);
-    bst->insertNode(2);
-    bst->insertNode(1);
 
-    bst->search(2);
+    bst->search(8);
     bst->search(3);
 
     bst->print();
 
-    getchar();
+    bst->printSize();
+
     getchar();
 
-    
     delete bst;
     return 0;
 }
