@@ -114,3 +114,21 @@ int BST::findMin(Node *tmp){
 
 
 // MAXIMUM element in the tree
+void BST::printMAX(){
+	Node *tmp = root;
+	cout << "Maximum Element in the TREE: " << findMax(tmp) << endl;
+}
+int BST::findMax(Node *tmp){
+	try{
+		while (tmp->right != NULL){
+			tmp = tmp->right;
+		}
+		return tmp->data;
+	}
+	catch (const invalid_argument &e){
+		if (tmp == NULL){
+			throw invalid_argument("Tree is Empty");
+		}
+		cerr << "ERROR: " << e.what() << std::endl;
+	}
+}

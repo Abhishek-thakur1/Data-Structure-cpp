@@ -25,4 +25,7 @@ class BST{
 
     void printMIN();
     int findMin(Node *root);
+
+    void printMAX();
+    int findMax(Node *root);
 };

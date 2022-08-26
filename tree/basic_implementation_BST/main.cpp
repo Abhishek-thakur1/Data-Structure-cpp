@@ -26,6 +26,7 @@ int main(){
     bst->printSize();
 
     bst->printMIN();
+    bst->printMAX();
 
     getchar();
 
