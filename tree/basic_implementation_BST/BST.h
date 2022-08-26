@@ -1,6 +1,4 @@
 #pragma once
-
-
 class BST{
     private:
     struct Node { 
@@ -13,7 +11,7 @@ class BST{
     int size = 0;
 
     public:
-    BST();
+    BST(): root(nullptr){};
     ~BST();
     Node *getRoot() { return root; }
     void printSize();

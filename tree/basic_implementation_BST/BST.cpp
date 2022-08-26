@@ -3,7 +3,7 @@
 
 using namespace std;
 
-BST::BST() { root = NULL; }
+// BST::BST() {  }
 
 BST::~BST() {}
 
