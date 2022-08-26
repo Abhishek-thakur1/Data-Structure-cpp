@@ -8,6 +8,8 @@ using namespace std;
 
 BST::~BST() {}
 
+
+// for inserting elements in the tree
 void BST::insertNode(int data){
     Node * newNode = new Node();
     newNode->data = data;
@@ -33,7 +35,7 @@ void BST::insert(Node *&root, Node *&newNode){
     }
 }
 
-
+// for printing elements
 void BST::print() {
 	Node* temp = root;
 	cout << endl;
@@ -60,6 +62,8 @@ void BST::DisplayInOrder(Node* temp) {
 	// cout << temp->data;
 }
 
+
+// for searching elements
 void BST::search(int data) {
 	Node* temp = root;
 	searchNode(temp, data);
@@ -85,10 +89,13 @@ void BST::searchNode(Node* temp, int data) {
 	}
 }
 
+// size of the tree
 void BST::printSize(){
 	cout << endl << "Size of BST is " << size << " nodes." << endl;
 }
 
+
+// MINIMUM element in the tree
 void BST::printMIN(){
 	Node *tmp = root;
 	cout<< "Minimum Element in the TREE: " << findMin(tmp) << endl;
@@ -104,3 +111,6 @@ int BST::findMin(Node *tmp){
 	}
 	return tmp->data;
 }
+
+
+// MAXIMUM element in the tree
