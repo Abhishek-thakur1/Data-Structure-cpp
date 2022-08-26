@@ -102,14 +102,20 @@ void BST::printMIN(){
 }
 
 int BST::findMin(Node *tmp){
-	if(tmp == NULL){
-		throw invalid_argument("Tree is Empty");
+	try{
+		while (tmp->left != NULL)
+		{
+			tmp = tmp->left;
+		}
+		return tmp->data;
 	}
-
-	while(tmp->left != NULL){
-		tmp = tmp->left;
+	catch (const invalid_argument &e){
+		if (tmp == NULL)
+		{
+			throw invalid_argument("Tree is Empty");
+		}
+		cerr << "ERROR: " << e.what() << endl;
 	}
-	return tmp->data;
 }
 
 
@@ -129,6 +135,6 @@ int BST::findMax(Node *tmp){
 		if (tmp == NULL){
 			throw invalid_argument("Tree is Empty");
 		}
-		cerr << "ERROR: " << e.what() << std::endl;
+		cerr << "ERROR: " << e.what() << endl;
 	}
 }
