@@ -28,4 +28,7 @@ class BST{
 
     void printMAX();
     int findMax(Node *root);
+
+    void printHeight();
+    int findHeight(Node *root);
 };

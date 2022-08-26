@@ -28,6 +28,8 @@ int main(){
     bst->printMIN();
     bst->printMAX();
 
+    bst->printHeight();
+
     getchar();
 
     delete bst;

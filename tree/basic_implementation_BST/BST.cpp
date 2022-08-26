@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include <stdexcept>
 #include "BST.h"
 
@@ -145,6 +146,7 @@ void BST::printMAX()
 	Node *tmp = root;
 	cout << "Maximum Element in the TREE: " << findMax(tmp) << endl;
 }
+
 int BST::findMax(Node *tmp)
 {
 	try
@@ -163,4 +165,18 @@ int BST::findMax(Node *tmp)
 		}
 		cerr << "ERROR: " << e.what() << endl;
 	}
+}
+
+// height of the tree
+void BST::printHeight()
+{
+	Node *tmp = root;
+	cout << "Height of the tree is: " << findHeight(tmp) << endl;
+}
+int BST::findHeight(Node *tmp)
+{
+	if (tmp == nullptr)
+		return -1;
+
+	return max(findHeight(tmp->left), findHeight(tmp->right)) + 1;
 }
