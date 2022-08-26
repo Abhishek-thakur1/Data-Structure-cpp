@@ -21,8 +21,8 @@ void BST::insert(Node *&root, Node *&newNode){
 
     if(root == NULL) root = newNode;
 
-    // (newNode->data <= root->data) ? insert(root->left, newNode) : insert(root->right, newNode);
-	if (newNode->data < root->data)
+    
+	else if (newNode->data < root->data)
     {
         insert(root->left, newNode);
     }
@@ -55,6 +55,8 @@ void BST::DisplayInOrder(Node* temp) {
 	if (temp->right != NULL) {
 		DisplayInOrder(temp->right);
 	}
+
+	// cout << temp->data;
 }
 
 void BST::search(int data) {
