@@ -1,4 +1,5 @@
 #pragma once
+
 class BST{
     private:
     struct Node { 

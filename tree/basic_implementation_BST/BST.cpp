@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <stdexcept>
-#include "BST.h"
+#include "../BST.h"
 
 using namespace std;
 
@@ -43,7 +43,7 @@ void BST::print()
 	Node *temp = root;
 	cout << endl;
 	cout << endl
-		 << "Printing data in BST..." << endl;
+		<< "Printing data in BST..." << endl;
 	DisplayInOrder(temp);
 }
 
@@ -52,7 +52,7 @@ void BST::DisplayInOrder(Node *temp)
 	if (root == NULL)
 	{
 		cout << endl
-			 << "List is empty. Nothing to display." << endl;
+			<< "List is empty. Nothing to display." << endl;
 		return;
 	}
 
@@ -83,8 +83,8 @@ void BST::searchNode(Node *temp, int data)
 	if (root == NULL)
 	{
 		cout << endl
-			 << "List is empty. No items to match." << endl
-			 << endl;
+			<< "List is empty. No items to match." << endl
+			<< endl;
 		return;
 	}
 
@@ -96,7 +96,7 @@ void BST::searchNode(Node *temp, int data)
 	if (temp->data == data)
 	{
 		cout << endl
-			 << "Search Operation: Node with value " << data << " found." << endl;
+			<< "Search Operation: Node with value " << data << " found." << endl;
 		return;
 	}
 
@@ -110,7 +110,7 @@ void BST::searchNode(Node *temp, int data)
 void BST::printSize()
 {
 	cout << endl
-		 << "Size of BST is " << size << " nodes." << endl;
+		<< "Size of BST is " << size << " nodes." << endl;
 }
 
 // MINIMUM element in the tree
