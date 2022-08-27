@@ -14,6 +14,8 @@ class BST{
     public:
     BST(): root(nullptr){};
     ~BST();
+
+    // basic_implementation_BST
     Node *getRoot() { return root; }
     void printSize();
     void insertNode(int data);
@@ -32,4 +34,8 @@ class BST{
 
     void printHeight();
     int findHeight(Node *root);
+
+
+    // TRAVERSAL...
+    
 };
