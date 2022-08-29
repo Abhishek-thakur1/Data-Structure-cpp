@@ -53,10 +53,40 @@ namespace traverse{
     // PRE Order traversal
     void Print_Pre_Order_Traversal(Node *node){
         if(node == nullptr) return;
-        
+
         std::cout << node->data << std::endl;
 
         Print_Pre_Order_Traversal(node->left);
         Print_Pre_Order_Traversal(node->right);
+    }
+
+    // IN order traversal
+    void Print_IN_Order_Traversal(Node *node){
+        if(node == nullptr) return;
+
+        Print_IN_Order_Traversal(node->left);
+        std::cout << node->data << std::endl;
+        Print_IN_Order_Traversal(node->right);
+    }
+
+    // POST order traversal
+    void Print_POST_Order_Traversal(Node *node){
+        if(node == nullptr) return;
+
+        Print_POST_Order_Traversal(node->left);
+        Print_POST_Order_Traversal(node->right);
+        std::cout << node->data << std::endl;
+    }
+
+    bool IsBinarySearchTree(Node *node){
+        return IsBetween(node, -10000, 10000);
+    }
+
+    bool IsBetween(Node *node, int min, int max){
+        if(node == nullptr) return true;
+
+        if(node->data > min && node->data < max && IsBetween(node->left, min, node->data) && IsBetween(node->right, node->data, max)) return true;
+
+        else return false;
     }
 }
