@@ -49,4 +49,14 @@ namespace traverse{
         }
 
     }
+
+    // PRE Order traversal
+    void Print_Pre_Order_Traversal(Node *node){
+        if(node == nullptr) return;
+        
+        std::cout << node->data << std::endl;
+
+        Print_Pre_Order_Traversal(node->left);
+        Print_Pre_Order_Traversal(node->right);
+    }
 }

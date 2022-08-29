@@ -5,8 +5,10 @@
 #include "traverse.cpp"
 #include "traverse.h"
 
+using namespace traverse;
+
 int main(){
-    using namespace traverse;
+    
 
     Node *root = nullptr;
 
@@ -20,8 +22,12 @@ int main(){
     root = insertValue(root, 29);
     root = insertValue(root, 9);
 
-    std::cout << "Tree items (breadth-first) in level order: ";
+    std::cout << "Tree items (breadth-first) in level order: "<< std::endl;
     PrintBFS(root);
+    std::cout << std::endl;
+
+    std::cout << "Tree items (depth-first) in PRE order: "<<std::endl;
+    Print_Pre_Order_Traversal(root);
     std::cout << std::endl;
 
     // getchar();

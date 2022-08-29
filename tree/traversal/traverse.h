@@ -13,9 +13,12 @@ namespace traverse{
 
     Node *newNode(int data);
     Node *insertNode(Node *node, int val);
-    
+
     // level order traversal
     void PrintBFS(Node *node); 
+
+    // PRE order traversal
+    void Print_Pre_Order_Traversal(Node *node); 
 }
 
 #endif 
